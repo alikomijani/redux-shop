@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { ProductCard } from "../components";
 import { ProductList } from "../constants/products";
 import { Container, Grid } from "@mui/material";

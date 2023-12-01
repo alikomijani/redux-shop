@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { Layout, PageLoader } from "./components";
 const Home = React.lazy(() => import("./pages/Home"));
 const ProductList = React.lazy(() => import("./pages/products/List"));
+const PostList = React.lazy(() => import("./pages/posts/Posts"));
 const ProductSingle = React.lazy(
   () => import("./pages/products/ProductSingle")
 );
@@ -41,6 +42,14 @@ const router = createBrowserRouter([
         element: (
           <React.Suspense fallback={<PageLoader />}>
             <CartPage />
+          </React.Suspense>
+        ),
+      },
+      {
+        path: "/posts",
+        element: (
+          <React.Suspense fallback={<PageLoader />}>
+            <PostList />
           </React.Suspense>
         ),
       },
