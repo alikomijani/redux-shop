@@ -2,9 +2,8 @@ import { Badge, IconButton } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Menu from "@mui/material/Menu";
 import React from "react";
-import { useAppSelector } from "../../hooks";
+import { useAppSelector, useAppDispatch } from "../../hooks";
 import CartItem from "./CartItem";
-import { useAppDispatch } from "../../hooks";
 import {
   removeProductFromCart,
   incrementProduct,
